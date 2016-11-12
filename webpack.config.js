@@ -6,22 +6,26 @@ module.exports = {
 		extensions: ['', '.js', '.jsx']
 	},
 
-	entry: path.resolve(__dirname, 'src/app.js'),
+	entry: path.resolve(__dirname, 'src/main.jsx'),
 
 	output: {
 		// output path
 		path: path.resolve(__dirname, 'public/dist'),
 		publicPath: 'dist/',
-		filename: 'dist.js'
+		filename: 'bundle.js'
 	},
 
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loader: 'babel'
-			}
+			},
+      {
+        test: /\.css$/,
+        loader: 'style!css'
+      }
 		]
 	},
 

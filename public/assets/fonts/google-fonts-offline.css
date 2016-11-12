@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gudea'), url(s/gudea/v4/Z6xYy_2MlN1cUISkeodEPA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Gudea';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gudea Bold'), local('Gudea-Bold'), url(s/gudea/v4/6M2RKly85u67vSsXH0-zqvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Gudea';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Gudea Italic'), local('Gudea-Italic'), url(s/gudea/v4/7K8okIOV072GIwnptze9lg.woff) format('woff');
+}
