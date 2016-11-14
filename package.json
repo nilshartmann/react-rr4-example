@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf public/dist/",
-    "start": "webpack-dev-server --progress --colors --hot --port 3000 --content-base public"
+    "start": "webpack-dev-server --progress --colors --hot --history-api-fallback --port 3000 --content-base public"
   },
   "repository": {
     "type": "git",
