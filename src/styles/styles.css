@@ -133,7 +133,7 @@ header {
 }
 
 .title {
-	width: 66.6667%;
+	/*width: 66.6667%;*/
 	padding: 0 0.9375rem 0 0.9375rem;
 }
 
@@ -466,7 +466,7 @@ header:after {
 
 @media screen and (min-width: 600px) {
 	.nav li {
-		width: 120px;
+		/*width: 120px;*/
 		border-bottom: none;
 		height: 50px;
 		line-height: 50px;

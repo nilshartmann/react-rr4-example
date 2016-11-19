@@ -4,6 +4,7 @@ import Redirect from 'react-router/Redirect';
 import Link from 'react-router/Link';
 import Miss from 'react-router/Miss';
 
+import WelcomePage from './welcome/WelcomePage';
 import AboutPage from './about/AboutPage';
 import ContactsPage from './contacts/ContactsPage';
 
@@ -34,6 +35,7 @@ export default (props) => {
 		<header>
 			<div className='nav'>
 				<ul>
+					<li><Link to='/welcome' className="button" activeClassName="active">Welcome</Link></li>
 					<li><Link to='/about' className="button" activeClassName="active">About</Link></li>
 					<li><Link to='/contacts' className="button" activeClassName="active">Contacts</Link></li>
 					<li><Link to='/secret' className="button" activeClassName="active">Secret</Link></li>
@@ -41,7 +43,8 @@ export default (props) => {
 			</div>
 		</header>
 
-		<Match exactly pattern='/' render={() => <Redirect to='/about' />} />
+		<Match exactly pattern='/' render={() => <Redirect to='/welcome' />} />
+		<Match pattern='/welcome' component={WelcomePage} />
 		<Match pattern='/about' component={AboutPage} />
 		<Match pattern='/contacts/:pk?' render={renderContactsPage} />
 		<Miss component={NoMatch} />
