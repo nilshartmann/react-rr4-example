@@ -225,6 +225,10 @@ header:after {
 	margin-left: 0.9375rem;
 }
 
+.button-bar .button:first-of-type {
+	margin-left: 0;
+}
+
 .button {
 	display: inline-block;
 	text-align: center;

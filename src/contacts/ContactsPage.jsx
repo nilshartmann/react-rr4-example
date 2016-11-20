@@ -5,8 +5,6 @@ import ContactView from './ContactView';
 
 export default ({contacts, selectedContactPk}) => {
 	const currentContact = contacts.find(contact => contact.pk === selectedContactPk);
-	console.log('selectedContactPk', selectedContactPk);
-	console.log('currentContact', currentContact);
 
 	return <div className='Page'>
 		<div className='title'><h1>Contacts</h1></div>
