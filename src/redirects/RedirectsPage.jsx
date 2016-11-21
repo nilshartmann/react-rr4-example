@@ -16,5 +16,5 @@ export default class RedirectsPage extends React.Component {
 }
 
 RedirectsPage.contextTypes = {
-	router: routerContextc
+	router: routerContext
 };
