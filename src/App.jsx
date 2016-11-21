@@ -11,16 +11,14 @@ import RedirectsPage from './redirects/RedirectsPage';
 
 import contactsModel from './contacts/ContactsModel';
 
-const NoMatch = (props) => (
-	// There's a bug in <Miss />, so no props are passed in yet: https://github.com/ReactTraining/react-router/issues/4026
-	<div>Nothing matched!</div>
+const NoMatch = ({location}) => (
+	<h2>No matches found for <tt>{location.pathname}</tt>!</h2>
 );
 
 const renderContactsPage = (props) => {
 	console.log('renderContactsPage --- props', props);
 
-	// there's a bug with undefined optional props: https://github.com/ReactTraining/react-router/issues/4138
-	if (!props.params.pk || props.params.pk === 'undefined') {
+	if (!props.params.pk) {
 		return <Redirect to={`${props.pathname}/1`} />;
 	}
 	return <ContactsPage contacts={contactsModel.contacts} selectedContactPk={props.params.pk} />;
@@ -28,7 +26,7 @@ const renderContactsPage = (props) => {
 
 
 export default (props) => {
-    console.log('main - props', props);
+	console.log('main - props', props);
 	return <main>
 		<header>
 			<div className='nav'>
