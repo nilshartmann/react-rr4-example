@@ -8,7 +8,7 @@ import { routerContext as routerContextType } from 'react-router/PropTypes'
 
 const LinkButton = ({to, children}) => (
 	<Link to={to}>{params => (
-		<a className='button' href={params.href} onClick={params.onClick}>{children}</a>
+		<a className={params.isActive ? 'button active' : 'button'} href={params.href} onClick={params.onClick}>{children}</a>
 	)}</Link>
 );
 

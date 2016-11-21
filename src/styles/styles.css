@@ -254,7 +254,11 @@ header:after {
 }
 
 .button:hover {
- background-color: #1a75af;
+	background-color: #1a75af;
+}
+
+.button.active {
+	background-color: #1a75af;
 }
 
 
